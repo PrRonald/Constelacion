@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.cuerpo{
+    display: grid;
+    grid-template-columns: [x0] 30vh [x1] auto [x2];
+    grid-template-rows: [y0] auto [y1];
+}
+
+.anuncios{
+    grid-column: x0 / x1 ;
+    grid-row: y0 / y1;
+    border: 2px solid black;
+}
+
+.contenido-venta{
+    grid-column: x1 / x2;
+    border: 2px solid black;
+}
+
+li{
+    list-style: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}

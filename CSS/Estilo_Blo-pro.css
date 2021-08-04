@@ -1,0 +1,76 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+}
+.contenedor-producto{
+    position: relative;
+    top: 60px;
+    display: grid;
+    grid-template-columns: [x0] 40% [x1] auto [x2];
+    grid-template-rows: [y0] 20vh [y1] 50px [y2] 50px [y3];
+    border-radius: 15px;   
+}
+
+.fotos{
+    grid-column: x0 / x1;
+    grid-row: y0 / y3;
+    border: solid 1px;
+    border: 1px solid black; 
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px
+    
+}
+
+.descripcion-cont{
+    grid-column: x1 / x2;
+    grid-row: y0 /y2;
+    border-top: 1px solid black;
+    border-right: 1px solid black; 
+    border-top-right-radius: 15px;
+}
+
+.botonoes{
+    grid-column: x1 / x2;
+    grid-row: y2 / y3;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom-right-radius: 15px;  
+}
+
+.lista-opciones{
+    list-style-type: none;   
+    position: relative;
+    left: 70%;
+    bottom: 10px;
+    padding: 0;
+    word-spacing: 5px;
+}
+
+.lista-opciones li{
+    display: inline-block;
+}
+
+.lista-opciones li a{
+    color: black;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    font-size: 25px;
+}
+
+.ver{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.comprar{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+

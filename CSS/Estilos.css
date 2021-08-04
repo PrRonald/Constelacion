@@ -1,0 +1,192 @@
+body{
+    margin: 0;
+    padding:0;
+}
+
+.inputcheck{
+    display: none;
+}
+
+.labelestilo{
+    display: none;
+}
+
+.menu{
+    height: 60px;
+    width: 80%;
+    background: rgba(26, 26, 126, 0.3);
+    border-radius: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10%;
+    right: 10%; 
+    overflow: hidden; 
+}
+
+.menu:hover{
+    border-style: solid;
+    border-width: 1px;
+    border-color: tomato;
+    transform:translate( -1px, -1px);   
+}
+
+.opcionesmenu{
+    list-style-type: none;   
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 0;   
+}
+
+li{
+    display: block;
+}
+
+.opcionesmenu li a{
+    color: rgb(227, 230, 233);
+    text-decoration: none;
+    padding: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.opcionesmenu li a:hover{
+    color:blue;
+}
+
+/* Estilo del cuerpo de la pagina de inicio */
+
+.cuerpo{
+    display: grid;
+    grid-template-columns: [x0] 100% [x1];
+    grid-template-rows: [y0] 50vh [y1] auto [y2] 300px [y3] ;
+
+}
+
+
+.portada{
+    grid-column: x0;
+    background: rgb(47, 47, 47); 
+}
+
+.contenido{
+    grid-row: y1 / y2;
+    width: 100%;
+    background: rgb(47, 47, 47);
+    border-top: solid 1px tomato; 
+    border-bottom: solid 1px tomato;
+    padding: 0;
+    margin: 0;  
+}
+
+    /* elementos del contenedor*/
+
+.listacontenido{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    grid-gap: 10px;
+    padding: 10px;
+}
+    
+.listacontenido li{
+    margin: 0;
+    padding: 0;
+    display: block; 
+}
+    
+.listacontenido li div{
+    background: rgb(189, 188, 188);
+    min-width: 350px;
+    height: 150px;
+    border-radius: 8px;
+}
+    /* Contenido del pie de pagina  */
+.piepagina{
+    grid-row: y2; 
+    background: rgb(47, 47, 47);
+}
+
+/* Estilo de cajas de los subitem del contenido */
+
+
+
+@media only screen and (max-width: 900px) {
+    
+    .labelestilo{
+        display: block;
+        position: fixed;
+        left: 4vw;
+        top: 3vh;
+        background: rgba(26, 26, 126, 0.3) ;
+        border-radius: 50%;
+        padding: 20px;
+        color: rgb(227, 230, 233);
+    }
+
+    .labelestilo:hover{
+        border: 2px solid rgb(69, 135, 223);
+        color: rgb(69, 135, 223);
+    }
+
+    .menu{
+        border-radius: 0;
+        background: none;
+        position: fixed;
+        left: -230px;
+        top: 100px;
+        height: 278px;
+        width: 235px;
+        transition: 0.6s ease-in-out;
+    }
+ 
+    .opcionesmenu{
+        list-style-type: none;   
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    li{
+        display: inline;
+        padding: 18px;
+    }
+
+    .opcionesmenu li a{
+        background: rgba(26, 26, 126, 0.3);
+        color: rgb(227, 230, 233);
+        text-decoration: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 24px;
+        border-radius: 30px;
+    }
+
+    .menu:hover{
+        border-style: none;
+        transform:translate( 0px, 0px);
+    } 
+    
+    a:hover{
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(69, 135, 223);  
+    }
+  
+    .inputcheck:checked ~ .menu {
+        transform: translateX(230px);
+    }
+}
+
+
+
